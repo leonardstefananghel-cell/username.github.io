@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLabGen — Agenție Web Profesională</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init('JnjQ9mQUW997_VPJW');</script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="logo-transparent.png" alt="Klaavo Agency" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#servicii" data-i18n="nav-services">Servicii</a></li>
+                <li><a href="#portofoliu" data-i18n="nav-portfolio">Portofoliu</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <div class="lang-wrap">
+                <div class="lang-switch" id="langSwitch" onclick="toggleLang()">
+                    <span class="lang-opt" id="optRO">RO</span>
+                    <span class="lang-opt" id="optEN">EN</span>
+                </div>
+            </div>
+            <a href="#contact" class="btn-aurora"><span data-i18n="nav-cta">Contactează-ne</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Meniu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#servicii" class="mobile-link" data-i18n="nav-services">Servicii</a></li>
+            <li><a href="#portofoliu" class="mobile-link" data-i18n="nav-portfolio">Portofoliu</a></li>
+            <li><a href="#contact" class="mobile-link" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n-html="hero-title">Construim site-uri care<br><span class="gradient-text">vând și impresionează</span></h1>
+                <p data-i18n="hero-desc">Design modern, cod curat și rezultate reale — tot ce ai nevoie pentru o prezență online de impact.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero-btn-primary">Cere ofertă gratuită</a>
+                    <a href="#portofoliu" class="btn btn-outline" data-i18n="hero-btn-outline">Vezi portofoliu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="servicii">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge" data-i18n="services-badge">Servicii</span>
+                <h2 class="section-title" data-i18n="services-title">Ce oferim</h2>
+                <div class="section-accent-line"></div>
+            </div>
+            <p class="section-subtitle fade-in" data-i18n="services-subtitle">Soluții complete pentru afacerea ta online</p>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="icon">🎨</div>
+                    <h3 data-i18n="service-design-title">Web Design</h3>
+                    <p data-i18n="service-design-desc">Designuri unice, adaptate brandului tău, cu focus pe experiența utilizatorului și conversii.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="icon">⚡</div>
+                    <h3 data-i18n="service-dev-title">Dezvoltare Web</h3>
+                    <p data-i18n="service-dev-desc">Site-uri rapide, securizate și scalabile, construite cu tehnologii moderne.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="icon">🔍</div>
+                    <h3 data-i18n="service-seo-title">SEO &amp; Optimizare</h3>
+                    <p data-i18n="service-seo-desc">Te ajutăm să fii găsit pe Google și să atragi clienți noi în mod organic.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="icon">🛒</div>
+                    <h3 data-i18n="service-shop-title">Magazine Online</h3>
+                    <p data-i18n="service-shop-desc">Soluții e-commerce complete, cu plăți integrate și management ușor al produselor.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="icon">🚀</div>
+                    <h3 data-i18n="service-maint-title">Mentenanță &amp; Suport</h3>
+                    <p data-i18n="service-maint-desc">Suntem alături de tine după lansare — actualizări, suport tehnic și îmbunătățiri continue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portofoliu">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge" data-i18n="portfolio-badge">Lucrările noastre</span>
+                <h2 class="section-title" data-i18n="portfolio-title">Portofoliu</h2>
+                <div class="section-accent-line"></div>
+            </div>
+            <div class="portfolio-grid">
+                <a class="portfolio-card fade-in" href="https://horizonconsulting.site/" target="_blank" rel="noopener">
+                    <div class="portfolio-img portfolio-img-stacked">
+                        <div class="portfolio-img-top" style="background-image: url('horizon-preview.png')"></div>
+                        <div class="portfolio-img-bottom" style="background-image: url('horizon-alt.png')"></div>
+                        <span class="portfolio-tag" data-i18n="portfolio-tag-showcase">Prezentare</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Horizon Consulting</h3>
+                        <p data-i18n="portfolio-horizon-desc">Site de prezentare profesional pentru o firmă de consultanță.</p>
+                        <span class="portfolio-link" data-i18n="portfolio-link">Vezi site →</span>
+                    </div>
+                </a>
+                <a class="portfolio-card fade-in" href="https://azofm.com/" target="_blank" rel="noopener">
+                    <div class="portfolio-img portfolio-img-stacked">
+                        <div class="portfolio-img-top" style="background-image: url('azofm-main.png')"></div>
+                        <div class="portfolio-img-bottom" style="background-image: url('azofm-preview.png')"></div>
+                        <span class="portfolio-tag" data-i18n="portfolio-tag-showcase">Prezentare</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>AZ-OFM</h3>
+                        <p data-i18n="portfolio-azofm-desc">Site de prezentare profesional pentru o agenție de OnlyFans Management.</p>
+                        <span class="portfolio-link" data-i18n="portfolio-link">Vezi site →</span>
+                    </div>
+                </a>
+                <a class="portfolio-card fade-in" href="https://sketchify-by-diniandrei.vercel.app/" target="_blank" rel="noopener">
+                    <div class="portfolio-img portfolio-img-stacked">
+                        <div class="portfolio-img-top" style="background-image: url('sketchify-main.png')"></div>
+                        <div class="portfolio-img-bottom" style="background-image: url('sketchify-preview.png')"></div>
+                        <span class="portfolio-tag" data-i18n="portfolio-tag-showcase">Prezentare</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Sketchify</h3>
+                        <p data-i18n="portfolio-sketchify-desc">Ruben Hassid gave the Map. I built the Engine — un generator AI de sketch-uri virale, automatizat cu Gemini AI.</p>
+                        <span class="portfolio-link" data-i18n="portfolio-link">Vezi site →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in" data-i18n="contact-title">Hai să construim ceva împreună</h2>
+            <p class="section-subtitle fade-in" data-i18n="contact-subtitle">Completează formularul și te contactăm în mai puțin de 24 de ore.</p>
+            <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="input-aurora"><input type="text" data-i18n-placeholder="contact-name" placeholder="Numele tău" required></div>
+                    <div class="input-aurora"><input type="email" data-i18n-placeholder="contact-email" placeholder="Adresa de email" required></div>
+                </div>
+                <div class="input-aurora"><input type="text" data-i18n-placeholder="contact-subject" placeholder="Subiect (ex: Vreau un site de prezentare)"></div>
+                <div class="input-aurora"><textarea rows="5" data-i18n-placeholder="contact-message" placeholder="Spune-ne despre proiectul tău..."></textarea></div>
+                <div class="btn-aurora" style="align-self:center; margin-top:8px;">
+                    <button type="submit" style="all:unset; cursor:pointer;"><span data-i18n="contact-submit">Trimite mesajul</span></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <img src="logo-transparent.png" alt="Klaavo Agency" class="footer-logo">
+                </div>
+                <div class="footer-center">
+                    <p class="footer-tagline" data-i18n-html="footer-tagline">Construim prezențe online care fac diferența.<br>Partenerul tău de încredere în lumea digitală.</p>
+                    <div class="dock" id="footerDock">
+                        <a href="https://www.instagram.com/klaavo.agency?igsh=bmRrZ2I2ODVlY2d2&utm_source=qr" target="_blank" class="dock-item instagram-link" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/40771699829" target="_blank" class="dock-item whatsapp-link" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:klaavo.agency@gmail.com" class="dock-item email-link" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:+40771699829" class="dock-item phone-link" aria-label="Telefon">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <ul class="footer-legal">
+                        <li><a href="#" data-i18n="footer-gdpr">Politica de confidențialitate (GDPR)</a></li>
+                        <li><a href="https://anpc.ro/" target="_blank" rel="noopener" data-i18n="footer-anpc">ANPC — protecția consumatorilor</a></li>
+                        <li><a href="#" data-i18n="footer-terms">Termeni și condiții</a></li>
+                    </ul>
+                    <p class="footer-copyright" data-i18n="footer-copyright">&copy; 2026 Klaavo Agency. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── TRANSLATIONS ──────────────────────────────────────────
+        const translations = {
+            ro: {
+                'nav-services': 'Servicii',
+                'nav-portfolio': 'Portofoliu',
+                'nav-contact': 'Contact',
+                'nav-cta': 'Contactează-ne',
+                'hero-title': 'Construim site-uri care<br><span class="gradient-text">vând și impresionează</span>',
+                'hero-desc': 'Design modern, cod curat și rezultate reale — tot ce ai nevoie pentru o prezență online de impact.',
+                'hero-btn-primary': 'Cere ofertă gratuită',
+                'hero-btn-outline': 'Vezi portofoliu',
+                'services-badge': 'Servicii',
+                'services-title': 'Ce oferim',
+                'services-subtitle': 'Soluții complete pentru afacerea ta online',
+                'service-design-title': 'Web Design',
+                'service-design-desc': 'Designuri unice, adaptate brandului tău, cu focus pe experiența utilizatorului și conversii.',
+                'service-dev-title': 'Dezvoltare Web',
+                'service-dev-desc': 'Site-uri rapide, securizate și scalabile, construite cu tehnologii moderne.',
+                'service-seo-title': 'SEO & Optimizare',
+                'service-seo-desc': 'Te ajutăm să fii găsit pe Google și să atragi clienți noi în mod organic.',
+                'service-shop-title': 'Magazine Online',
+                'service-shop-desc': 'Soluții e-commerce complete, cu plăți integrate și management ușor al produselor.',
+                'service-maint-title': 'Mentenanță & Suport',
+                'service-maint-desc': 'Suntem alături de tine după lansare — actualizări, suport tehnic și îmbunătățiri continue.',
+                'portfolio-badge': 'Lucrările noastre',
+                'portfolio-title': 'Portofoliu',
+                'portfolio-tag-showcase': 'Prezentare',
+                'portfolio-horizon-desc': 'Site de prezentare profesional pentru o firmă de consultanță.',
+                'portfolio-azofm-desc': 'Site de prezentare profesional pentru o agenție de OnlyFans Management.',
+                'portfolio-sketchify-desc': 'Ruben Hassid gave the Map. I built the Engine — un generator AI de sketch-uri virale, automatizat cu Gemini AI.',
+                'portfolio-link': 'Vezi site →',
+                'contact-title': 'Hai să construim ceva împreună',
+                'contact-subtitle': 'Completează formularul și te contactăm în mai puțin de 24 de ore.',
+                'contact-name': 'Numele tău',
+                'contact-email': 'Adresa de email',
+                'contact-subject': 'Subiect (ex: Vreau un site de prezentare)',
+                'contact-message': 'Spune-ne despre proiectul tău...',
+                'contact-submit': 'Trimite mesajul',
+                'footer-tagline': 'Construim prezențe online care fac diferența.<br>Partenerul tău de încredere în lumea digitală.',
+                'footer-gdpr': 'Politica de confidențialitate (GDPR)',
+                'footer-anpc': 'ANPC — protecția consumatorilor',
+                'footer-terms': 'Termeni și condiții',
+                'footer-copyright': '© 2026 Klaavo Agency. Toate drepturile rezervate.',
+            },
+            en: {
+                'nav-services': 'Services',
+                'nav-portfolio': 'Portfolio',
+                'nav-contact': 'Contact',
+                'nav-cta': 'Contact Us',
+                'hero-title': 'We build websites that<br><span class="gradient-text">sell and impress</span>',
+                'hero-desc': 'Modern design, clean code and real results — everything you need for a powerful online presence.',
+                'hero-btn-primary': 'Get a free quote',
+                'hero-btn-outline': 'View portfolio',
+                'services-badge': 'Services',
+                'services-title': 'What we offer',
+                'services-subtitle': 'Complete solutions for your online business',
+                'service-design-title': 'Web Design',
+                'service-design-desc': 'Unique designs, tailored to your brand, focused on user experience and conversions.',
+                'service-dev-title': 'Web Development',
+                'service-dev-desc': 'Fast, secure and scalable websites, built with modern technologies.',
+                'service-seo-title': 'SEO & Optimization',
+                'service-seo-desc': 'We help you get found on Google and attract new clients organically.',
+                'service-shop-title': 'Online Stores',
+                'service-shop-desc': 'Complete e-commerce solutions, with integrated payments and easy product management.',
+                'service-maint-title': 'Maintenance & Support',
+                'service-maint-desc': "We're with you after launch — updates, technical support and continuous improvements.",
+                'portfolio-badge': 'Our Work',
+                'portfolio-title': 'Portfolio',
+                'portfolio-tag-showcase': 'Showcase',
+                'portfolio-horizon-desc': 'Professional presentation website for a consulting firm.',
+                'portfolio-azofm-desc': 'Professional presentation website for an OnlyFans Management agency.',
+                'portfolio-sketchify-desc': 'Ruben Hassid gave the Map. I built the Engine — an AI generator of viral sketches, automated with Gemini AI.',
+                'portfolio-link': 'View site →',
+                'contact-title': "Let's build something together",
+                'contact-subtitle': "Fill in the form and we'll get back to you in less than 24 hours.",
+                'contact-name': 'Your name',
+                'contact-email': 'Email address',
+                'contact-subject': 'Subject (e.g.: I want a presentation website)',
+                'contact-message': 'Tell us about your project...',
+                'contact-submit': 'Send message',
+                'footer-tagline': 'We build online presences that make a difference.<br>Your trusted partner in the digital world.',
+                'footer-gdpr': 'Privacy Policy (GDPR)',
+                'footer-anpc': 'ANPC — consumer protection',
+                'footer-terms': 'Terms and Conditions',
+                'footer-copyright': '© 2026 Klaavo Agency. All rights reserved.',
+            }
+        };
+
+        let currentLang = 'ro';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+
+            // Text elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.textContent = t[key];
+            });
+
+            // HTML elements (with tags inside)
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                if (t[key] !== undefined) el.innerHTML = t[key];
+            });
+
+            // Placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (t[key] !== undefined) el.placeholder = t[key];
+            });
+
+            const sw = document.getElementById('langSwitch');
+            sw.classList.toggle('en', lang === 'en');
+            document.getElementById('optRO').classList.toggle('active', lang === 'ro');
+            document.getElementById('optEN').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+
+        function toggleLang() {
+            setLanguage(currentLang === 'ro' ? 'en' : 'ro');
+        }
+
+        // Init lang switch state
+        document.getElementById('optRO').classList.add('active');
+
+        // ── NAVBAR SCROLL ─────────────────────────────────────────
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // ── HAMBURGER ─────────────────────────────────────────────
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // ── FADE-IN ───────────────────────────────────────────────
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ── ANIMATED DOCK ─────────────────────────────────────────
+        const dock = document.getElementById('footerDock');
+        if (dock) {
+            const items = dock.querySelectorAll('.dock-item');
+            dock.addEventListener('mousemove', (e) => {
+                items.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    const center = rect.left + rect.width / 2;
+                    const dist = Math.abs(e.clientX - center);
+                    const maxDist = 100;
+                    const scale = dist < maxDist ? 1 + (1 - dist / maxDist) * 0.7 : 1;
+                    item.style.transform = `scale(${scale})`;
+                });
+            });
+            dock.addEventListener('mouseleave', () => {
+                items.forEach(item => item.style.transform = 'scale(1)');
+            });
+        }
+
+        // ── CONTACT FORM ──────────────────────────────────────────
+        function handleSubmit(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const inputs = form.querySelectorAll('input, textarea');
+            const btn = form.querySelector('button');
+            const btnSpan = btn.querySelector('span') || btn;
+
+            btnSpan.textContent = currentLang === 'ro' ? 'Se trimite...' : 'Sending...';
+            btn.disabled = true;
+
+            const templateParams = {
+                name: inputs[0].value,
+                email: inputs[1].value,
+                subject: inputs[2].value || 'Mesaj nou de pe site',
+                message: inputs[3].value
+            };
+
+            emailjs.send('service_n4zvn7l', 'template_xd98tzp', templateParams)
+                .then(() => {
+                    btnSpan.textContent = currentLang === 'ro' ? 'Mesaj trimis!' : 'Message sent!';
+                    form.reset();
+                    setTimeout(() => {
+                        btnSpan.textContent = translations[currentLang]['contact-submit'];
+                        btn.disabled = false;
+                    }, 3000);
+                })
+                .catch((err) => {
+                    console.error('EmailJS error:', JSON.stringify(err));
+                    btnSpan.textContent = currentLang === 'ro' ? 'Eroare, încearcă din nou' : 'Error, please try again';
+                    btn.disabled = false;
+                    setTimeout(() => {
+                        btnSpan.textContent = translations[currentLang]['contact-submit'];
+                    }, 3000);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
